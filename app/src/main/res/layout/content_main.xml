@@ -13,22 +13,27 @@
     tools:context="com.newventuresoftware.waveformdemo.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <com.newventuresoftware.waveform.WaveformView
+    <rm.com.audiowave.AudioWaveView
+        android:id="@+id/wave"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        app:mode="RECORDING"
-        android:background="#000000"
-        android:id="@+id/waveformView" />
+        android:layout_weight="2"
+        app:animateExpansion="false"
+        app:chunkHeight="100dp"
+        app:chunkRadius="0px"
+        app:chunkSpacing="0px"
+        app:chunkWidth="1px"
+        app:minChunkHeight="1px"
+        app:touchable="true"
+        app:waveColor="#D1D1D1" />
 
     <com.newventuresoftware.waveform.WaveformView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         app:mode="PLAYBACK"
         app:waveformStrokeThickness="3"
-        app:waveformColor="#e5dc33"
+        app:waveformColor="#000"
         app:waveformFillColor="#e93519"
-        android:background="#000000"
         android:id="@+id/playbackWaveformView" />
 </LinearLayout>
